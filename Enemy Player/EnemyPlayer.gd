@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var VELOCITY = Vector2()
-var SPEED = 200
+var SPEED = 350
 
 
 enum {INIT, IDLE, RUN, ATTACK}
