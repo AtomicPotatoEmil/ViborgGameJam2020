@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Menus/Start Menu/1.png" type="Texture" id=1]
+[ext_resource path="res://Menus/Start Menu/2 (1).png" type="Texture" id=2]
+[ext_resource path="res://Menus/Start Menu/CRED_2.png" type="Texture" id=3]
+[ext_resource path="res://Menus/Start Menu/CRED_1.png" type="Texture" id=4]
+[ext_resource path="res://Menus/Start Menu/StartMenu.gd" type="Script" id=5]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Begin" type="TextureButton" parent="."]
+margin_left = 335.0
+margin_top = 209.0
+margin_right = 2129.0
+margin_bottom = 891.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+
+[node name="Credits" type="TextureButton" parent="."]
+margin_left = 422.342
+margin_top = 368.321
+margin_right = 2216.34
+margin_bottom = 1050.32
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
