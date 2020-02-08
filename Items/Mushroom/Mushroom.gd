@@ -1,6 +1,9 @@
 extends Area2D
 
 func _ready():
+	randomize()
+	$Timer.set_wait_time(range(1,10)[randi()%range(1,10).size()])
+	$Timer.start()
 	$AnimatedSprite.play()
 	pass
 
@@ -11,3 +14,7 @@ func _on_Mushroom_body_entered(body):
 	else:
 		queue_free()
 	pass 
+
+
+func _on_timeout_shroom():
+	queue_free()

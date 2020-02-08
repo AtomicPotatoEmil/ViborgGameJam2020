@@ -14,8 +14,6 @@
 [ext_resource path="res://Items/purpleflower/flower_purple/pink_flower12.png" type="Texture" id=12]
 [ext_resource path="res://Items/purpleflower/purpleflower.gd" type="Script" id=13]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 12 ) ],
@@ -40,4 +38,7 @@ frames = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.14639, 2.57566 )
 shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="body_entered" from="." to="." method="_on_purpleflower_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_pflower_timeout"]
