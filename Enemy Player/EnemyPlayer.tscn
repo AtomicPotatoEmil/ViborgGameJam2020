@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet1.png" type="Texture" id=1]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet4.png" type="Texture" id=2]
@@ -17,14 +17,12 @@
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet15.png" type="Texture" id=15]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet18.png" type="Texture" id=16]
 [ext_resource path="res://Enemy Player/EnemyPlayer.gd" type="Script" id=17]
-[ext_resource path="res://Enemy Player/assets/werewolf-Sheet47.png" type="Texture" id=18]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet42.png" type="Texture" id=19]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet41.png" type="Texture" id=20]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet43.png" type="Texture" id=21]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet45.png" type="Texture" id=22]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet44.png" type="Texture" id=23]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet46.png" type="Texture" id=24]
-[ext_resource path="res://Enemy Player/assets/werewolf-Sheet48.png" type="Texture" id=25]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet24.png" type="Texture" id=26]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet19.png" type="Texture" id=27]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet20.png" type="Texture" id=28]
@@ -59,7 +57,7 @@ animations = [ {
 "name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "fireball",
 "speed": 5.0
@@ -156,7 +154,9 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "fireball"
-length = 0.7
+length = 0.2
+loop = true
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -176,10 +176,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -283,7 +283,8 @@ script = ExtResource( 17 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
-animation = "dead"
+animation = "fireball"
+frame = 3
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite" groups=[
 "claw",
