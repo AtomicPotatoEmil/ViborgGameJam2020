@@ -21,3 +21,4 @@ func _on_ManaPotion_area_entered(area):
 	else:
 		queue_free()
 	pass 
+
