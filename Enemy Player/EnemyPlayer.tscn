@@ -42,19 +42,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ) ],
@@ -66,12 +56,22 @@ animations = [ {
 "loop": true,
 "name": "dead",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 54.0985, 53.6957 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "attack"
 length = 0.56
 tracks/0/type = "value"
@@ -123,7 +123,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "dead"
 length = 0.8
 loop = true
@@ -163,8 +163,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite/Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "fireball"
 length = 0.2
 loop = true
@@ -205,8 +217,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite/Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
 resource_name = "hurt"
 length = 0.7
 loop = true
@@ -246,9 +270,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite/Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle"
+[sub_resource type="Animation" id=7]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -287,9 +322,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite/Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=3]
-resource_name = "run"
+[sub_resource type="Animation" id=8]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -328,8 +374,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite/Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=9]
 radius = 40.2814
 height = 62.7257
 
@@ -351,32 +409,33 @@ animation = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/Area2D"]
 position = Vector2( -90.4102, 36.6528 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="FireballPos" type="Position2D" parent="AnimatedSprite"]
-position = Vector2( -36.9179, 3.00494 )
+position = Vector2( -66.9877, 3.70422 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/attack = SubResource( 6 )
-anims/dead = SubResource( 9 )
-anims/fireball = SubResource( 7 )
-anims/hurt = SubResource( 8 )
-anims/idle = SubResource( 2 )
-anims/run = SubResource( 3 )
+anims/attack = SubResource( 3 )
+anims/dead = SubResource( 4 )
+anims/fireball = SubResource( 5 )
+anims/hurt = SubResource( 6 )
+anims/idle = SubResource( 7 )
+anims/run = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 26.8785, 20.4106 )
-shape = SubResource( 4 )
+shape = SubResource( 9 )
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5
 
 [node name="ShootTimer" type="Timer" parent="."]
 one_shot = true
+[connection signal="area_entered" from="AnimatedSprite/Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerFireball_animation_finished"]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerHurt_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerDead_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerHurt_animation_finished"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
