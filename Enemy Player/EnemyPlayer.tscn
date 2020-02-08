@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet1.png" type="Texture" id=1]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet4.png" type="Texture" id=2]
@@ -17,6 +17,25 @@
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet15.png" type="Texture" id=15]
 [ext_resource path="res://Enemy Player/assets/werewolf-Sheet18.png" type="Texture" id=16]
 [ext_resource path="res://Enemy Player/EnemyPlayer.gd" type="Script" id=17]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet47.png" type="Texture" id=18]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet42.png" type="Texture" id=19]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet41.png" type="Texture" id=20]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet43.png" type="Texture" id=21]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet45.png" type="Texture" id=22]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet44.png" type="Texture" id=23]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet46.png" type="Texture" id=24]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet48.png" type="Texture" id=25]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet24.png" type="Texture" id=26]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet19.png" type="Texture" id=27]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet20.png" type="Texture" id=28]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet25.png" type="Texture" id=29]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet21.png" type="Texture" id=30]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet26.png" type="Texture" id=31]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet27.png" type="Texture" id=32]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet29.png" type="Texture" id=33]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet28.png" type="Texture" id=34]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet23.png" type="Texture" id=35]
+[ext_resource path="res://Enemy Player/assets/werewolf-Sheet22.png" type="Texture" id=36]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,6 +52,21 @@ animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "fireball",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -77,6 +111,104 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "attack" ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "dead"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "dead" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "fireball"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fireball" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "hurt"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "hurt" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -141,14 +273,17 @@ tracks/1/keys = {
 radius = 40.2814
 height = 62.7257
 
-[node name="EnemyPlayer" type="KinematicBody2D"]
+[node name="EnemyPlayer" type="KinematicBody2D" groups=[
+"enemy",
+]]
 position = Vector2( 205.262, 286.922 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 17 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, 0 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "dead"
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite" groups=[
 "claw",
@@ -159,16 +294,30 @@ position = Vector2( -90.4102, 36.6528 )
 shape = SubResource( 5 )
 disabled = true
 
+[node name="FireballPos" type="Position2D" parent="AnimatedSprite"]
+position = Vector2( -36.9179, 3.00494 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/attack = SubResource( 6 )
+anims/dead = SubResource( 9 )
+anims/fireball = SubResource( 7 )
+anims/hurt = SubResource( 8 )
 anims/idle = SubResource( 2 )
 anims/run = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 26.8785, 20.4106 )
 shape = SubResource( 4 )
+disabled = true
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5
+
+[node name="ShootTimer" type="Timer" parent="."]
+one_shot = true
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerFireball_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerHurt_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerDead_animation_finished"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
