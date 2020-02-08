@@ -27,3 +27,7 @@ func _on_Dragonfly_area_entered(area):
 	if area.is_in_group("edge"):
 		queue_free()
 	pass 
+
+
+
+
