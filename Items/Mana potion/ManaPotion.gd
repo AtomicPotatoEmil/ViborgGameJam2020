@@ -22,4 +22,5 @@ func _on_ManaPotion_body_entered(body):
 		queue_free()
 	else:
 		queue_free()
-	pass
+	pass 
+
