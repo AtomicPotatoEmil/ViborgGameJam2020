@@ -68,10 +68,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 54.0985, 53.6957 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=6]
 resource_name = "attack"
 length = 0.56
 tracks/0/type = "value"
@@ -110,10 +110,19 @@ tracks/2/keys = {
 "update": 1,
 "values": [ "attack" ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=4]
-=======
 [sub_resource type="Animation" id=9]
 resource_name = "dead"
 length = 0.8
@@ -184,6 +193,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=8]
 resource_name = "hurt"
@@ -213,10 +234,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
->>>>>>> fa5598bc375b0de5e8aabfde7f31b9a1dc32d6bc
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -243,8 +275,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
+resource_name = "run"
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -271,8 +316,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ "run" ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 40.2814
 height = 62.7257
 
@@ -286,8 +343,7 @@ script = ExtResource( 17 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2, 0 )
 frames = SubResource( 1 )
-animation = "fireball"
-frame = 3
+animation = "run"
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite" groups=[
 "claw",
@@ -295,22 +351,13 @@ frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/Area2D"]
 position = Vector2( -90.4102, 36.6528 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 disabled = true
 
 [node name="FireballPos" type="Position2D" parent="AnimatedSprite"]
 position = Vector2( -36.9179, 3.00494 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-<<<<<<< HEAD
-anims/attack = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/run = SubResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 26.8785, 20.4106 )
-shape = SubResource( 6 )
-=======
 anims/attack = SubResource( 6 )
 anims/dead = SubResource( 9 )
 anims/fireball = SubResource( 7 )
@@ -321,8 +368,6 @@ anims/run = SubResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 26.8785, 20.4106 )
 shape = SubResource( 4 )
-disabled = true
->>>>>>> fa5598bc375b0de5e8aabfde7f31b9a1dc32d6bc
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5

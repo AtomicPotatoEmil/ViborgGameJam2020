@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menus/Start Menu/finalbegin.png" type="Texture" id=1]
 [ext_resource path="res://Menus/Start Menu/2 (1).png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Menus/Credits/creditsend.png" type="Texture" id=4]
 [ext_resource path="res://Menus/Start Menu/StartMenu.gd" type="Script" id=5]
 [ext_resource path="res://Menus/Start Menu/bg_idea_final.jpg" type="Texture" id=6]
+[ext_resource path="res://Boot Screen/Main_Menu_Music.wav" type="AudioStream" id=7]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -43,4 +44,7 @@ texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
