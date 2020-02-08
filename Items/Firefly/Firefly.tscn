@@ -1,0 +1,47 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Items/Firefly/firefly11.png" type="Texture" id=1]
+[ext_resource path="res://Items/Firefly/firefly12.png" type="Texture" id=2]
+[ext_resource path="res://Items/Firefly/firefly1.png" type="Texture" id=3]
+[ext_resource path="res://Items/Firefly/firefly2.png" type="Texture" id=4]
+[ext_resource path="res://Items/Firefly/firefly3.png" type="Texture" id=5]
+[ext_resource path="res://Items/Firefly/firefly4.png" type="Texture" id=6]
+[ext_resource path="res://Items/Firefly/firefly5.png" type="Texture" id=7]
+[ext_resource path="res://Items/Firefly/firefly7.png" type="Texture" id=8]
+[ext_resource path="res://Items/Firefly/firefly8.png" type="Texture" id=9]
+[ext_resource path="res://Items/Firefly/firefly9.png" type="Texture" id=10]
+[ext_resource path="res://Items/Firefly/firefly10.png" type="Texture" id=11]
+[ext_resource path="res://Items/Firefly/firefly6.png" type="Texture" id=12]
+[ext_resource path="res://Items/Firefly/Firefly.gd" type="Script" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 6.66313
+
+[node name="Firefly" type="Area2D"]
+position = Vector2( 424.806, 216.659 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.48681, 5.42392 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.06
+[connection signal="area_entered" from="." to="." method="_on_Firefly_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
