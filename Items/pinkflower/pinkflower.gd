@@ -1,20 +1,16 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
+	$Timer.set_wait_time(range(1,10)[randi()%range(1,10).size()])
+	$Timer.start()
 	$AnimatedSprite.play()
 	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_pinkflower_body_entered(body):
@@ -24,3 +20,7 @@ func _on_pinkflower_body_entered(body):
 		queue_free()
 	pass 
 
+
+
+func _on_pinkflower_timeout():
+	queue_free()

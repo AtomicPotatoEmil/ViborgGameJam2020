@@ -5,6 +5,9 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
+	$Timer.set_wait_time(range(1,10)[randi()%range(1,10).size()])
+	$Timer.start()
 	$AnimatedSprite.play()
 	pass # Replace with function body.
 
@@ -15,3 +18,7 @@ func _on_purpleflower_body_entered(body):
 	else:
 		queue_free()
 	pass
+
+
+func _on_pflower_timeout():
+	queue_free()
