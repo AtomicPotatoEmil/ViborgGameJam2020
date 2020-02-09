@@ -90,6 +90,7 @@ func _physics_process(delta):
 	
 	if state in [IDLE, ATTACK, RUN, SHIELD, HURT] and HP <= 0:
 		change_state(DEAD)
+		emit_signal("player_dead")
 	
 	if new_anim != anim:
 		anim = new_anim

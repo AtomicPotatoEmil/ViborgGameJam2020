@@ -77,4 +77,5 @@ func _on_Player_player_dead():
 
 
 func _on_Player_won():
+	get_tree().change_scene("res://endings/good/goodendning.tscn")
 	pass # Replace with function body.

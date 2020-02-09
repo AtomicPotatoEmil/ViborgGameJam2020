@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spacecenter.png-589617ad8e0738d7a74f55f6eace2344.stex"
+path="res://.import/spacecenter.png-79f79d5ac306fc2d9a1e6779c6922a39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://endings/Good/Trickster-master/documentation/spacecenter.png"
-dest_files=[ "res://.import/spacecenter.png-589617ad8e0738d7a74f55f6eace2344.stex" ]
+source_file="res://endings/good/Trickster-master/documentation/spacecenter.png"
+dest_files=[ "res://.import/spacecenter.png-79f79d5ac306fc2d9a1e6779c6922a39.stex" ]
 
 [params]
 

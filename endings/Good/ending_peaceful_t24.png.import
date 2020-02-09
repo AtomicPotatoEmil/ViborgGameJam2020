@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ending_peaceful_t24.png-7dd7a13bac513fe1f220a979b72c1121.stex"
+path="res://.import/ending_peaceful_t24.png-2d6f35c2b9afe0058ebf7f26cb4e27b1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://endings/Good/ending_peaceful_t24.png"
-dest_files=[ "res://.import/ending_peaceful_t24.png-7dd7a13bac513fe1f220a979b72c1121.stex" ]
+source_file="res://endings/good/ending_peaceful_t24.png"
+dest_files=[ "res://.import/ending_peaceful_t24.png-2d6f35c2b9afe0058ebf7f26cb4e27b1.stex" ]
 
 [params]
 

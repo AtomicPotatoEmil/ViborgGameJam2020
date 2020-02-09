@@ -9,7 +9,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("player_attack") or Input.is_action_just_pressed("enemy_melee_attack"):
 		return
 	
-	if Input.is_action_just_pressed("X-A"):
+	if Input.is_action_just_pressed("fireball_attack") or Input.is_action_just_pressed("player_attack"):
 		get_tree().change_scene("res://Menus/Credits/Credits.tscn")
 	pass
 
