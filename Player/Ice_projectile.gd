@@ -18,18 +18,12 @@ func change_direction(dir):
 	pass
 
 
-func _on_Fireball_body_entered(body):
-	if body.is_in_group("player"):
+func _on_Ice_projectile_area_entered(area):
+	if area.is_in_group("enemy"):
 		queue_free()
 	pass 
 
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-	pass # Replace with function body.
-
-
-func _on_Fireball_area_entered(area):
-	if area.is_in_group("shield"):
-		queue_free()
 	pass # Replace with function body.

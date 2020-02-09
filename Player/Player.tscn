@@ -1,14 +1,18 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/assets/Full_bunny_char_sheet_FINISHED.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player/HealthUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/ManaUI.tscn" type="PackedScene" id=4]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.3023
+
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 10.358
 height = 30.2978
 
-[sub_resource type="Animation" id=2]
-resource_name = "attack"
+[sub_resource type="Animation" id=3]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -22,8 +26,36 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 8, 9, 10, 11, 12, 13, 14 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Shield/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=3]
+=======
+[sub_resource type="Animation" id=4]
+>>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 resource_name = "dead"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -49,8 +81,24 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=4]
+=======
+[sub_resource type="Animation" id=5]
+>>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -87,8 +135,24 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/Shield/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=5]
+=======
+[sub_resource type="Animation" id=6]
+>>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -103,8 +167,36 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 18, 18, 19, 20, 21 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Shield/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=6]
+=======
+[sub_resource type="Animation" id=7]
+>>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -119,11 +211,33 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Shield/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=7]
-resource_name = "shield"
+[sub_resource type="Animation" id=8]
 length = 0.5
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -136,8 +250,32 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 32, 33, 34 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Shield/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=9]
 height = 31.3966
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -150,30 +288,63 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 vframes = 5
 hframes = 8
-frame = 24
+frame = 34
 
 [node name="Position2D" type="Position2D" parent="Sprite"]
 position = Vector2( 15.0892, -4.28207 )
 
+[node name="Shield" type="Area2D" parent="Sprite" groups=[
+"shield",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Shield"]
+position = Vector2( 0.875977, 2.33592 )
+shape = SubResource( 1 )
+disabled = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.03908, -1.22345 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
 "player",
 ]]
+<<<<<<< HEAD
 anims/attack = SubResource( 2 )
 anims/dead = SubResource( 3 )
 anims/hurt = SubResource( 4 )
 anims/idle = SubResource( 5 )
 anims/run = SubResource( 6 )
 anims/shield = SubResource( 7 )
+=======
+anims/attack = SubResource( 3 )
+anims/dead = SubResource( 4 )
+anims/hurt = SubResource( 5 )
+anims/idle = SubResource( 6 )
+anims/run = SubResource( 7 )
+anims/shield = SubResource( 8 )
+>>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( -2.24298, -1.42735 )
-shape = SubResource( 8 )
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerHurt_animation_finished"]
+shape = SubResource( 9 )
+
+[node name="HealthUI" parent="." instance=ExtResource( 3 )]
+margin_left = -40.0407
+margin_top = -66.7346
+margin_right = 337.959
+margin_bottom = 6.26544
+rect_scale = Vector2( 0.2, 0.2 )
+
+[node name="ManaUI" parent="." instance=ExtResource( 4 )]
+margin_left = -39.4793
+margin_top = -48.0411
+margin_right = 338.521
+margin_bottom = 24.9589
+rect_scale = Vector2( 0.2, 0.2 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerAttack_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayerHurt_animation_finished"]
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

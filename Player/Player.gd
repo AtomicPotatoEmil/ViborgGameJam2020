@@ -5,10 +5,13 @@ var SPEED = 300
 
 signal player_dead
 
+var current_mana = 10
+
 enum  {INIT, IDLE, RUN, HURT, SHIELD, DEAD, ATTACK}
 var state
 
 var HP = 10
+var current_var = 20
 
 var anim
 var new_anim
@@ -39,8 +42,24 @@ func get_input():
 		if state == RUN and VELOCITY.x == 0 and VELOCITY.y == 0:
 			change_state(IDLE)
 		
-		if Input.is_action_just_pressed("player_attack"):
+		
+		if Input.is_action_just_pressed("player_attack") and current_mana > 0:
+			current_mana -= 1
+			var BALL = preload("res://Player/Ice_projectile.tscn")
+			var b = BALL.instance()
+			b.global_position = $Sprite/Position2D.global_position
+			if $Sprite.scale.x == 1:
+				b.change_direction(1)
+			else:
+				b.scale.x = -1
+				b.change_direction(-1)
+			get_parent().add_child(b)
 			change_state(ATTACK)
+		
+		if Input.is_action_just_pressed("player_shield") and current_mana > 0:
+			current_mana -= 1
+			change_state(SHIELD)
+		
 		
 	if state == HURT:
 		if Input.get_action_strength("player_right"):
@@ -58,6 +77,10 @@ func get_input():
 	pass
 
 func _physics_process(delta):
+	$HealthUI.value = HP
+	$HealthUI.max_value = 10
+	$ManaUI.max_value = 20
+	$ManaUI.value = current_mana
 	get_input()
 	
 	if state in [IDLE, ATTACK, RUN, SHIELD, HURT] and HP <= 0:
@@ -111,4 +134,6 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("fireball"):
 		HP -= 1
 		change_state(HURT)
+	if area.is_in_group("Item"):
+		current_mana += 1
 	pass 

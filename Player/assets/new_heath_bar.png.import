@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Green_Health.png-9c4d233b9477202875c3d7fb04b6ae8d.stex"
+path="res://.import/new_heath_bar.png-6f74450c9006a22e514b441570c2236b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/assets/Green_Health.png"
-dest_files=[ "res://.import/Green_Health.png-9c4d233b9477202875c3d7fb04b6ae8d.stex" ]
+source_file="res://Player/assets/new_heath_bar.png"
+dest_files=[ "res://.import/new_heath_bar.png-6f74450c9006a22e514b441570c2236b.stex" ]
 
 [params]
 
