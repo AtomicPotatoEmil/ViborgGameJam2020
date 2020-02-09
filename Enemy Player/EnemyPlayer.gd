@@ -54,9 +54,9 @@ func get_input():
 			change_state(FIREBALL)
 			can_shoot = false
 			$ShootTimer.start()
-		
-	if state == RUN and VELOCITY.x == 0 and VELOCITY.y == 0:
-		change_state(IDLE)
+			
+		if state == RUN and VELOCITY.x == 0 and VELOCITY.y == 0:
+			change_state(IDLE)
 
 	
 	VELOCITY = VELOCITY.normalized() * SPEED
