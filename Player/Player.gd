@@ -144,6 +144,8 @@ func _on_hitbox_area_entered(area):
 
 
 func _on_AnimationPlayerDead_animation_finished(dead):
+	if state != DEAD:
+		state == DEAD
 	if state == DEAD:
 		emit_signal("player_dead")
 	pass # Replace with function body.

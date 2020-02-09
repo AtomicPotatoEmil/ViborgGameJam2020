@@ -272,7 +272,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 vframes = 5
 hframes = 8
-frame = 8
+frame = 14
 
 [node name="Position2D" type="Position2D" parent="Sprite"]
 position = Vector2( 15.0892, -4.28207 )
