@@ -25,7 +25,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 6.66313
 
-[node name="Firefly" type="Area2D"]
+[node name="Firefly" type="Area2D" groups=[
+"Item",
+]]
 position = Vector2( 424.806, 216.659 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -34,7 +36,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 9
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -18,3 +18,9 @@ func _on_Mushroom_body_entered(body):
 
 func _on_timeout_shroom():
 	queue_free()
+
+
+func _on_Mushroom_area_entered(area):
+	if area.is_in_group("Item"):
+		queue_free()
+	pass # Replace with function body.

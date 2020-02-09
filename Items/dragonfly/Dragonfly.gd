@@ -18,7 +18,7 @@ func _on_Dragonfly_body_entered(body):
 	if body.is_in_group("player"):
 		body.gainMana()
 		queue_free()
-	else:
+	elif body.is_in_group("Enemy"):
 		queue_free()
 	pass 
 

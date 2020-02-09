@@ -22,3 +22,9 @@ func _on_purpleflower_body_entered(body):
 
 func _on_pflower_timeout():
 	queue_free()
+
+
+func _on_purpleflower_area_entered(area):
+	if area.is_in_group("Item"):
+		queue_free()
+	pass # Replace with function body.

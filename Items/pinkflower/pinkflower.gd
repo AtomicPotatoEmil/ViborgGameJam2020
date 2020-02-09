@@ -24,3 +24,9 @@ func _on_pinkflower_body_entered(body):
 
 func _on_pinkflower_timeout():
 	queue_free()
+
+
+func _on_pinkflower_area_entered(area):
+	if area.is_in_group("Item"):
+		queue_free()
+	pass # Replace with function body.

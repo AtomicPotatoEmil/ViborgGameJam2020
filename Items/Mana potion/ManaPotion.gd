@@ -24,3 +24,9 @@ func _on_ManaPotion_body_entered(body):
 		queue_free()
 	pass 
 
+
+
+func _on_ManaPotion_area_entered(area):
+	if area.is_in_group("Item"):
+		queue_free()
+	pass # Replace with function body.

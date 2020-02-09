@@ -15,10 +15,17 @@ func _ready():
 func _on_lily_body_entered(body):
 	if body.is_in_group("player"):
 		body.gainMana()
-	else:
-		queue_free()
 	pass 
+
 
 
 func _on_lily_timeout():
 	queue_free()
+	
+
+
+func _on_lily_area_entered(area):
+	if area.is_in_group("Item"):
+		queue_free()
+	
+	pass # Replace with function body.
