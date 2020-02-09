@@ -16,7 +16,76 @@ _global_script_class_icons={
 [application]
 
 config/name="ViborgGameJam2020"
+run/main_scene="res://Boot Screen/BootScreen.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+enemy_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":0,"axis_value":1.0,"script":null)
+ ]
+}
+enemy_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":0,"axis_value":-1.0,"script":null)
+ ]
+}
+enemy_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":1,"axis_value":1.0,"script":null)
+ ]
+}
+enemy_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":1,"axis_value":-1.0,"script":null)
+ ]
+}
+enemy_melee_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+fireball_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+player_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+ ]
+}
+player_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+ ]
+}
+player_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+ ]
+}
+player_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+ ]
+}
+player_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+player_shield={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
 
 [rendering]
 
