@@ -30,4 +30,6 @@ func _on_Timer_timeout():
 func _on_Firefly_area_entered(area):
 	if area.is_in_group("edge"):
 		queue_free()
+	if area.is_in_group("player"):
+		queue_free()
 	pass 

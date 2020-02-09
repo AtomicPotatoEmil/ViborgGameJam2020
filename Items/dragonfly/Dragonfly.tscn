@@ -25,7 +25,9 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 17.1725
 
-[node name="Dragonfly" type="Area2D"]
+[node name="Dragonfly" type="Area2D" groups=[
+"Item",
+]]
 position = Vector2( 568.783, 310.98 )
 script = ExtResource( 13 )
 __meta__ = {

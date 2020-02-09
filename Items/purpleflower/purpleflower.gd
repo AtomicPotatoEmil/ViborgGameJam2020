@@ -19,4 +19,7 @@ func _on_pflower_timeout():
 func _on_purpleflower_area_entered(area):
 	if area.is_in_group("Item"):
 		queue_free()
+	if area.is_in_group("player"):
+		queue_free()
+
 	pass # Replace with function body.
