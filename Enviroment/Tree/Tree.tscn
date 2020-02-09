@@ -20,6 +20,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.10004, 22.1372 )
 
 [node name="Tree" type="StaticBody2D"]
 position = Vector2( 37.2825, 0 )
@@ -41,5 +42,6 @@ position = Vector2( 0.716949, 7.62939e-06 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.734573, -11.7241 )
 shape = SubResource( 3 )
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

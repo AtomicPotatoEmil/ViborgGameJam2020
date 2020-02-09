@@ -51,11 +51,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=3]
-=======
 [sub_resource type="Animation" id=4]
->>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 resource_name = "dead"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -94,11 +90,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=4]
-=======
 [sub_resource type="Animation" id=5]
->>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -148,11 +140,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=5]
-=======
 [sub_resource type="Animation" id=6]
->>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -192,11 +180,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=6]
-=======
 [sub_resource type="Animation" id=7]
->>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -288,7 +272,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 vframes = 5
 hframes = 8
-frame = 34
+frame = 8
 
 [node name="Position2D" type="Position2D" parent="Sprite"]
 position = Vector2( 15.0892, -4.28207 )
@@ -305,26 +289,16 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.03908, -1.22345 )
 shape = SubResource( 2 )
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
 "player",
 ]]
-<<<<<<< HEAD
-anims/attack = SubResource( 2 )
-anims/dead = SubResource( 3 )
-anims/hurt = SubResource( 4 )
-anims/idle = SubResource( 5 )
-anims/run = SubResource( 6 )
-anims/shield = SubResource( 7 )
-=======
 anims/attack = SubResource( 3 )
 anims/dead = SubResource( 4 )
 anims/hurt = SubResource( 5 )
 anims/idle = SubResource( 6 )
 anims/run = SubResource( 7 )
 anims/shield = SubResource( 8 )
->>>>>>> 53dac896773242d0a24c9a9291cd6968c8747fe6
 
 [node name="hitbox" type="Area2D" parent="."]
 
