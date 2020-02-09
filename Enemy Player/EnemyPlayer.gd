@@ -83,6 +83,7 @@ func change_state(new_state):
 func _physics_process(delta):
 	get_input()
 	
+	
 	if new_anim != anim:
 		anim = new_anim
 		$AnimationPlayer.play(new_anim)
@@ -120,4 +121,10 @@ func _on_AnimationPlayerHurt_animation_finished(hurt):
 
 func _on_AnimationPlayerDead_animation_finished(dead):
 	emit_signal("enemy_dead")
+	pass 
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("player"):
+		area.hurt(1)
 	pass 

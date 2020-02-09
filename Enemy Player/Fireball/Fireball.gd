@@ -20,6 +20,5 @@ func change_direction(dir):
 
 func _on_Fireball_body_entered(body):
 	if body.is_in_group("player"):
-		body.hurt()
 		queue_free()
 	pass 
