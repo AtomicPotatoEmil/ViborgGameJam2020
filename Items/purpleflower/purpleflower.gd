@@ -12,12 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_purpleflower_body_entered(body):
-	if body.is_in_group("player"):
-		body.gainMana()
-	else:
-		queue_free()
-	pass
+
 
 
 func _on_pflower_timeout():
@@ -27,4 +22,7 @@ func _on_pflower_timeout():
 func _on_purpleflower_area_entered(area):
 	if area.is_in_group("Item"):
 		queue_free()
+	if area.is_in_group("player"):
+		queue_free()
+
 	pass # Replace with function body.

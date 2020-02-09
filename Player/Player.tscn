@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13, 14 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "dead"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -50,8 +50,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "hurt"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -89,8 +88,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idle"
+[sub_resource type="Animation" id=5]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -106,8 +104,7 @@ tracks/0/keys = {
 "values": [ 18, 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "run"
+[sub_resource type="Animation" id=6]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -166,10 +163,10 @@ shape = SubResource( 1 )
 "player",
 ]]
 anims/attack = SubResource( 2 )
-anims/dead = SubResource( 6 )
-anims/hurt = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/run = SubResource( 5 )
+anims/dead = SubResource( 3 )
+anims/hurt = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/run = SubResource( 6 )
 anims/shield = SubResource( 7 )
 
 [node name="hitbox" type="Area2D" parent="."]
