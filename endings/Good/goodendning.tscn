@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://endings/Good/Trickster-master/fonts/Trickster-Reg.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://endings/Good/ending_peaceful_t24.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Goodending" type="Control"]
+margin_left = 63.0
+margin_top = 109.0
+margin_right = 103.0
+margin_bottom = 149.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 444.594, 189.945 )
+scale = Vector2( 1.07, 1.05 )
+frames = SubResource( 1 )
+
+[node name="RichTextLabel" type="Label" parent="."]
+margin_left = 38.9739
+margin_top = 321.529
+margin_right = 1569.97
+margin_bottom = 438.529
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.117647, 0.207843, 0.823529, 1 )
+text = "In a desperate cry for help, Bella used the all of her newly gathered magic to
+ entrap the evil spirit possesing Kiba, thus freeing his mind from anger
+ and despair. The pair managed to espace the infernal place and unite again
+in the world of their own.  Good Ending"
+__meta__ = {
+"_edit_use_anchors_": false
+}
