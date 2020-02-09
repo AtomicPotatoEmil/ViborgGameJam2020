@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/assets/ice_projectile1.png" type="Texture" id=1]
+[ext_resource path="res://Player/assets/ice_projectile4.png" type="Texture" id=2]
+[ext_resource path="res://Player/assets/ice_projectile5.png" type="Texture" id=3]
+[ext_resource path="res://Player/assets/ice_projectile6.png" type="Texture" id=4]
+[ext_resource path="res://Player/assets/ice_projectile3.png" type="Texture" id=5]
+[ext_resource path="res://Player/assets/ice_projectile2.png" type="Texture" id=6]
+[ext_resource path="res://Player/Ice_projectile.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.79712
+height = 14.6564
+
+[node name="Ice_projectile" type="Area2D" groups=[
+"ice",
+]]
+script = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 1 )
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 12.422, 0.0584183 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 6.60815, 0.307365 )
+scale = Vector2( 1.9067, 0.600438 )
+[connection signal="area_entered" from="." to="." method="_on_Ice_projectile_area_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -9,7 +9,7 @@ signal enemy_dead
 
 var can_shoot = true
 
-enum {INIT, IDLE, RUN, ATTACK, FIREBALL, HURT, DEAD}
+enum {INIT, IDLE, RUN, ATTACK, FIREBALL, HURT, DEAD, FROZEN}
 var state
 
 var anim
@@ -78,6 +78,8 @@ func change_state(new_state):
 			new_anim = "hurt"
 		DEAD:
 			new_anim = "dead"
+		FROZEN:
+			new_anim = "frozen"
 	pass
 
 func _physics_process(delta):
@@ -124,7 +126,8 @@ func _on_AnimationPlayerDead_animation_finished(dead):
 	pass 
 
 
-func _on_Area2D_area_entered(area):
-	if area.is_in_group("player"):
-		area.hurt(1)
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("ice"):
+		if state in [IDLE, RUN, ATTACK, FIREBALL]:
+			change_state(FROZEN)
 	pass 
