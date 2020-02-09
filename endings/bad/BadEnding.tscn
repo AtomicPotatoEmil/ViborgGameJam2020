@@ -51,7 +51,6 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="ps4_X_and_Xbox_A" type="Sprite" parent="."]
-self_modulate = Color( 1, 1, 1, 0.689459 )
 position = Vector2( 922.896, 538.159 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )

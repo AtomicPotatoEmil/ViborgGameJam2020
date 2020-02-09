@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menus/Start Menu/finalbegin.png" type="Texture" id=1]
 [ext_resource path="res://Menus/Start Menu/2 (1).png" type="Texture" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Menus/Start Menu/ps4_X_and_Xbox_A.png" type="Texture" id=7]
 [ext_resource path="res://Menus/Start Menu/ps4_Sqr_and_Xbox_X.png" type="Texture" id=8]
 [ext_resource path="res://Menus/Start Menu/Main_Menu_Music.wav" type="AudioStream" id=9]
+[ext_resource path="res://Menus/Start Menu/Light_Quit.png" type="Texture" id=10]
+[ext_resource path="res://Menus/Start Menu/qUIT.png" type="Texture" id=11]
+[ext_resource path="res://Menus/Start Menu/quitcontrolls.png" type="Texture" id=12]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -18,7 +21,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 511.773, 298.534 )
 scale = Vector2( 1.135, 1.053 )
 texture = ExtResource( 6 )
@@ -59,4 +62,21 @@ texture = ExtResource( 8 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 732.765
+margin_top = 377.368
+margin_right = 2045.77
+margin_bottom = 877.368
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Sprite" parent="."]
+position = Vector2( 706.918, 416.138 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 12 )
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
