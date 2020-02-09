@@ -13,13 +13,8 @@
 [ext_resource path="res://Items/Mana potion/ManaPotion.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Items/purpleflower/purpleflower.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Items/Mushroom/Mushroom.tscn" type="PackedScene" id=13]
-<<<<<<< HEAD
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Enemy Player/EnemyPlayer.tscn" type="PackedScene" id=15]
-=======
-[ext_resource path="res://Enemy Player/EnemyPlayer.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=15]
->>>>>>> e06a7f3703077b64ffa430a81e5ea23ee13ea805
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11.9944 )
@@ -1591,19 +1586,11 @@ position = Vector2( 147.207, 665.939 )
 [node name="Mushroom" parent="YSort/Mushroom" instance=ExtResource( 13 )]
 position = Vector2( 0.735596, -2.03963 )
 
-<<<<<<< HEAD
 [node name="EnemyPlayer" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 2287.81, 695.124 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 788.154, 658.853 )
-=======
-[node name="Player" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 165.825, 148.865 )
-
-[node name="EnemyPlayer" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 423.924, 52.5672 )
->>>>>>> e06a7f3703077b64ffa430a81e5ea23ee13ea805
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0

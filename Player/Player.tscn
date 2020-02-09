@@ -300,7 +300,9 @@ anims/idle = SubResource( 6 )
 anims/run = SubResource( 7 )
 anims/shield = SubResource( 8 )
 
-[node name="hitbox" type="Area2D" parent="."]
+[node name="hitbox" type="Area2D" parent="." groups=[
+"player",
+]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( -2.24298, -1.42735 )

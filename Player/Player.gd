@@ -5,7 +5,7 @@ var SPEED = 300
 
 signal player_dead
 
-var current_mana = 10
+var current_mana = 0
 
 enum  {INIT, IDLE, RUN, HURT, SHIELD, DEAD, ATTACK}
 var state
