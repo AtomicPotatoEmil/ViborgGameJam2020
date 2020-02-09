@@ -2481,4 +2481,6 @@ position = Vector2( 2285.09, 693.113 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0
+[connection signal="player_dead" from="YSort/Player" to="." method="_on_Player_player_dead"]
+[connection signal="won" from="YSort/Player" to="." method="_on_Player_won"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

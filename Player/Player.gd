@@ -3,6 +3,7 @@ extends KinematicBody2D
 var VELOCITY = Vector2()
 var SPEED = 300
 
+signal won
 signal player_dead
 
 var current_mana = 0
@@ -77,6 +78,10 @@ func get_input():
 	pass
 
 func _physics_process(delta):
+	
+	if current_mana >= $ManaUI.max_value:
+		emit_signal("won")
+	
 	$HealthUI.value = HP
 	$HealthUI.max_value = 10
 	$ManaUI.max_value = 15
@@ -85,7 +90,6 @@ func _physics_process(delta):
 	
 	if state in [IDLE, ATTACK, RUN, SHIELD, HURT] and HP <= 0:
 		change_state(DEAD)
-		emit_signal("player_dead")
 	
 	if new_anim != anim:
 		anim = new_anim
@@ -137,3 +141,9 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("Item"):
 		current_mana += 1
 	pass 
+
+
+func _on_AnimationPlayerDead_animation_finished(dead):
+	if state == DEAD:
+		emit_signal("player_dead")
+	pass # Replace with function body.

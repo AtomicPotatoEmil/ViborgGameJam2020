@@ -69,3 +69,12 @@ func span_loop():
 func _on_Timer_timeout():
 	span_loop()
 	pass # Replace with function body.
+
+
+func _on_Player_player_dead():
+	get_tree().change_scene("res://endings/bad/BadEnding.tscn")
+	pass # Replace with function body.
+
+
+func _on_Player_won():
+	pass # Replace with function body.
