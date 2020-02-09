@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Entering_the_area.wav-e8ee5e6410afaa8ee22025f9aacc6810.sample"
+
+[deps]
+
+source_file="res://Splitscreen/Entering_the_area.wav"
+dest_files=[ "res://.import/Entering_the_area.wav-e8ee5e6410afaa8ee22025f9aacc6810.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

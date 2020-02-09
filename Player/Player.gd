@@ -79,7 +79,7 @@ func get_input():
 func _physics_process(delta):
 	$HealthUI.value = HP
 	$HealthUI.max_value = 10
-	$ManaUI.max_value = 20
+	$ManaUI.max_value = 15
 	$ManaUI.value = current_mana
 	get_input()
 	

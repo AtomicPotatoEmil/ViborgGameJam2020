@@ -9,6 +9,7 @@ onready var enemy_viewport = $HBoxContainer/EnemyViewPort/Viewport2
 onready var world = $HBoxContainer/PlayerViewPort/Viewport/Node2D
 
 func _ready():
+	$AudioStreamPlayer.play()
 	enemy_viewport.world_2d = player_viewport.world_2d
 	pass
 

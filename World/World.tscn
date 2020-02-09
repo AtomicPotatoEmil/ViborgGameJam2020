@@ -2474,10 +2474,10 @@ position = Vector2( 147.207, 665.939 )
 position = Vector2( 0.735596, -2.03963 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 165.825, 148.865 )
+position = Vector2( 178.128, 130.41 )
 
 [node name="EnemyPlayer" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 423.924, 52.5672 )
+position = Vector2( 2285.09, 693.113 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0
