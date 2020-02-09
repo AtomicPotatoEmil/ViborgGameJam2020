@@ -272,7 +272,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 vframes = 5
 hframes = 8
-frame = 34
+frame = 8
 
 [node name="Position2D" type="Position2D" parent="Sprite"]
 position = Vector2( 15.0892, -4.28207 )
@@ -289,7 +289,6 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2.03908, -1.22345 )
 shape = SubResource( 2 )
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
 "player",
